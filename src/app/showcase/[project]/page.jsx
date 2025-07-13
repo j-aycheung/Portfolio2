@@ -33,6 +33,10 @@ const showcaseProjects = {
   },
 }
 
+export function generateStaticParams() {
+  return Object.keys(showcaseProjects).map((slug) => ({ project: slug }))
+}
+
 export default function ShowcaseProject({ params }) {
   const { project } = params
   const data = showcaseProjects[project]
