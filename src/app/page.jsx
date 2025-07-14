@@ -71,21 +71,6 @@ function ArrowDownIcon(props) {
   )
 }
 
-function Article({ article }) {
-  return (
-    <Card as="article">
-      <Card.Title href={`/articles/${article.slug}`}>
-        {article.title}
-      </Card.Title>
-      <Card.Eyebrow as="time" dateTime={article.date} decorate>
-        {formatDate(article.date)}
-      </Card.Eyebrow>
-      <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
-    </Card>
-  )
-}
-
 function SocialLink({ icon: Icon, ...props }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
@@ -207,5 +192,56 @@ function Resume() {
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
+  )
+}
+
+export default function Page() {
+  return (
+    <Container className="mt-20">
+      <div className="grid max-w-[32rem] gap-y-16">
+        <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-4">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+              Hi, I’m John. I design things and write code.
+            </h1>
+            <div className="flex gap-4">
+              <Button href="/about" variant="secondary">
+                About me
+              </Button>
+              <Button href="/contact">Contact</Button>
+            </div>
+          </div>
+          <div className="flex flex-col gap-4">
+            <h2 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+              Connect
+            </h2>
+            <div className="flex gap-4">
+              <SocialLink
+                href="https://github.com"
+                icon={GitHubIcon}
+                aria-label="Follow me on GitHub"
+              />
+              <SocialLink
+                href="https://www.instagram.com"
+                icon={InstagramIcon}
+                aria-label="Follow me on Instagram"
+              />
+              <SocialLink
+                href="https://www.linkedin.com"
+                icon={LinkedInIcon}
+                aria-label="Connect with me on LinkedIn"
+              />
+              <SocialLink
+                href="https://twitter.com"
+                icon={XIcon}
+                aria-label="Follow me on Twitter"
+              />
+            </div>
+          </div>
+        </div>
+        <Newsletter />
+        <Resume />
+      </div>
+    </Container>
   )
 }
