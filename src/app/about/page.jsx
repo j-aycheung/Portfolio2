@@ -63,10 +63,10 @@ export default function About() {
               data and code.
             </h1>
             <p>
-              I'm a self-motivated developer who enjoys building tools that are
-              equal parts functional and delightful. I graduated with a B.S. in
-              Computer Science from the University at Buffalo, and since then,
-              I’ve focused on using <b>React</b>, <b>Next.js</b>, and
+              I&apos;m a self-motivated developer who enjoys building tools that
+              are equal parts functional and delightful. I graduated with a B.S.
+              in Computer Science from the University at Buffalo, and since
+              then, I&apos;ve focused on using <b>React</b>, <b>Next.js</b>, and
               <b>Supabase</b> to create B2B dashboards, job outreach utilities,
               and automation systems that scale.
             </p>
