@@ -59,8 +59,8 @@ export default function About() {
         <div className="flex flex-col justify-center lg:order-first lg:row-span-2">
           <section className="prose-zinc prose max-w-none text-base dark:prose-invert sm:text-lg">
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-              Hi, I’m Jay. I build tools that help people move faster
-              with data and code.
+              Hi, I&apos;m Jay. I build tools that help people move faster with
+              data and code.
             </h1>
             <p>
               I'm a self-motivated developer who enjoys building tools that are
@@ -78,8 +78,8 @@ export default function About() {
               catalogs to authentication and SQL-driven inventory tracking.
             </p>
             <p>
-              I also enjoy teaching. I’ve mentored students in Python, Lua, and
-              Unreal Engine as an online instructor at iD Tech. I find that
+              I also enjoy teaching. I&apos;ve mentored students in Python, Lua,
+              and Unreal Engine as an online instructor at iD Tech. I find that
               helping others debug their thinking improves my own.
             </p>
             <h3 className="mb-2 mt-10 text-xl font-semibold">
@@ -104,14 +104,14 @@ export default function About() {
             <h3 className="mb-2 mt-10 text-xl font-semibold">
               Outside of code...
             </h3>
-            <p>When I’m not coding, I’m probably:</p>
+            <p>When I&apos;m not coding, I&apos;m probably:</p>
             <ul className="mb-6">
               <li>Reading visual novels or manga</li>
               <li>Walking aimlessly while thinking through UI flows</li>
             </ul>
             <p>
-              Let’s connect if you’re working on something interesting or just
-              want to swap ideas!
+              Let&apos;s connect if you&apos;re working on something interesting
+              or just want to swap ideas!
             </p>
           </section>
           <div className="mt-10 lg:pl-0">
@@ -129,7 +129,8 @@ export default function About() {
                 (231) 730-4595
               </SocialLink>
               <li className="flex text-sm text-zinc-600 dark:text-zinc-400">
-                <span className="font-medium">Location:</span>&nbsp;Middle Village, NY
+                <span className="font-medium">Location:</span>&nbsp;Middle
+                Village, NY
               </li>
             </ul>
           </div>
