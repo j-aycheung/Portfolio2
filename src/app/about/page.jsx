@@ -39,7 +39,7 @@ function MailIcon(props) {
 export const metadata = {
   title: 'About',
   description:
-    'I’m Jay Cheung, a React/Next.js developer based in Flushing, NY. I build modern web apps and data tools with a focus on clarity, performance, and user experience.',
+    'I’m Jay Cheung, a React/Next.js developer based in Middle Village, NY. I build modern web apps and data tools with a focus on clarity, performance, and user experience.',
 }
 
 export default function About() {
@@ -56,55 +56,83 @@ export default function About() {
             />
           </div>
         </div>
-        <div className="lg:order-first lg:row-span-2">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Hi, I’m Jay Cheung. I build modern web apps and data tools in New
-            York.
-          </h1>
-          <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+        <div className="flex flex-col justify-center lg:order-first lg:row-span-2">
+          <section className="prose-zinc prose max-w-none text-base dark:prose-invert sm:text-lg">
+            <h1 className="mb-6 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+              Hi, I’m Jay. I build tools that help people move faster
+              with data and code.
+            </h1>
             <p>
-              I’m a developer passionate about building clear, performant, and
-              user-focused web experiences. With a B.S. in Computer Science from
-              the University at Buffalo, I specialize in React, Next.js, and
-              full-stack JavaScript. My work spans B2B dashboards, automation
-              tools, and interactive data visualizations.
+              I'm a self-motivated developer who enjoys building tools that are
+              equal parts functional and delightful. I graduated with a B.S. in
+              Computer Science from the University at Buffalo, and since then,
+              I’ve focused on using <b>React</b>, <b>Next.js</b>, and
+              <b>Supabase</b> to create B2B dashboards, job outreach utilities,
+              and automation systems that scale.
             </p>
             <p>
-              I thrive in collaborative, agile teams and love mentoring others,
-              whether it’s through code reviews or teaching Python and Lua. My
-              recent roles include building secure data workflows at FTI
-              Consulting and developing B2B platforms at Jarellsj.
+              At FTI Consulting, I currently help legal teams uncover sensitive
+              data through structured analysis and classification tools.
+              Previously, at Jarellsj, I worked on internal platforms for
+              seafood sales teams — implementing everything from product
+              catalogs to authentication and SQL-driven inventory tracking.
             </p>
             <p>
-              Outside of work, I enjoy experimenting with new frameworks,
-              automating workflows, and helping others break into tech. Let’s
-              connect!
+              I also enjoy teaching. I’ve mentored students in Python, Lua, and
+              Unreal Engine as an online instructor at iD Tech. I find that
+              helping others debug their thinking improves my own.
             </p>
+            <h3 className="mb-2 mt-10 text-xl font-semibold">
+              What I’m Into Right Now:
+            </h3>
+            <ul className="mb-6">
+              <li>
+                Experimenting with <b>SSG/SSR tradeoffs</b> in large Next.js
+                apps
+              </li>
+              <li>
+                Building productivity tools with <b>client-only architecture</b>
+              </li>
+              <li>
+                Exploring <b>Framer Motion</b> for micro-interactions
+              </li>
+              <li>
+                Writing small <b>Python utilities</b> to automate manual
+                workflows
+              </li>
+            </ul>
+            <h3 className="mb-2 mt-10 text-xl font-semibold">
+              Outside of code...
+            </h3>
+            <p>When I’m not coding, I’m probably:</p>
+            <ul className="mb-6">
+              <li>Reading visual novels or manga</li>
+              <li>Walking aimlessly while thinking through UI flows</li>
+            </ul>
+            <p>
+              Let’s connect if you’re working on something interesting or just
+              want to swap ideas!
+            </p>
+          </section>
+          <div className="mt-10 lg:pl-0">
+            <ul role="list" className="space-y-2">
+              <SocialLink
+                href="https://github.com/j-aycheung"
+                icon={GitHubIcon}
+              >
+                GitHub
+              </SocialLink>
+              <SocialLink href="mailto:jaycheung321@gmail.com" icon={MailIcon}>
+                jaycheung321@gmail.com
+              </SocialLink>
+              <SocialLink href="tel:2317304595" icon={MailIcon}>
+                (231) 730-4595
+              </SocialLink>
+              <li className="flex text-sm text-zinc-600 dark:text-zinc-400">
+                <span className="font-medium">Location:</span>&nbsp;Middle Village, NY
+              </li>
+            </ul>
           </div>
-        </div>
-        <div className="lg:pl-20">
-          <ul role="list">
-            <SocialLink href="https://github.com/j-aycheung" icon={GitHubIcon}>
-              GitHub
-            </SocialLink>
-            <SocialLink
-              href="mailto:jaycheung321@gmail.com"
-              icon={MailIcon}
-              className="mt-4"
-            >
-              jaycheung321@gmail.com
-            </SocialLink>
-            <SocialLink
-              href="tel:2317304595"
-              icon={MailIcon}
-              className="mt-4"
-            >
-              (231) 730-4595
-            </SocialLink>
-            <li className="mt-4 flex text-sm text-zinc-600 dark:text-zinc-400">
-              <span className="font-medium">Location:</span>&nbsp;Flushing, NY
-            </li>
-          </ul>
         </div>
       </div>
     </Container>
