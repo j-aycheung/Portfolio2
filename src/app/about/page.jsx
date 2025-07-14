@@ -83,7 +83,7 @@ export default function About() {
               helping others debug their thinking improves my own.
             </p>
             <h3 className="mb-2 mt-10 text-xl font-semibold">
-              What I’m Into Right Now:
+              What I&apos;m Into Right Now:
             </h3>
             <ul className="mb-6">
               <li>
