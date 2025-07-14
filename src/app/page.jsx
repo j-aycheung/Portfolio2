@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
 
@@ -11,17 +10,6 @@ import {
   LinkedInIcon,
   XIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
-import image1 from '@/images/photos/image-1.jpg'
-import image2 from '@/images/photos/image-2.jpg'
-import image3 from '@/images/photos/image-3.jpg'
-import image4 from '@/images/photos/image-4.jpg'
-import image5 from '@/images/photos/image-5.jpg'
-import { getAllArticles } from '@/lib/articles'
-import { formatDate } from '@/lib/formatDate'
 
 function MailIcon(props) {
   return (
@@ -176,7 +164,6 @@ function Resume() {
     {
       company: 'Planetaria',
       title: 'CEO',
-      logo: logoPlanetaria,
       start: '2019',
       end: {
         label: 'Present',
@@ -186,21 +173,18 @@ function Resume() {
     {
       company: 'Airbnb',
       title: 'Product Designer',
-      logo: logoAirbnb,
       start: '2014',
       end: '2019',
     },
     {
       company: 'Facebook',
       title: 'iOS Software Engineer',
-      logo: logoFacebook,
       start: '2011',
       end: '2014',
     },
     {
       company: 'Starbucks',
       title: 'Shift Supervisor',
-      logo: logoStarbucks,
       start: '2008',
       end: '2011',
     },
@@ -222,157 +206,5 @@ function Resume() {
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
-  )
-}
-
-function Photos() {
-  let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
-
-  return (
-    <div className="mt-16 sm:mt-20">
-      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
-          <div
-            key={image.src}
-            className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
-              rotations[imageIndex % rotations.length],
-            )}
-          >
-            <Image
-              src={image}
-              alt=""
-              sizes="(min-width: 640px) 18rem, 11rem"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
-
-export default function Home({ articles }) {
-  return (
-    <>
-      <Container className="mt-9">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Jay Cheung – React/Next.js Developer in New York
-          </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m a full-stack developer focused on building modern, performant
-            web apps and data tools. I specialize in React, Next.js, and
-            TypeScript, with experience in B2B dashboards, automation, and
-            interactive data visualizations. I thrive in agile teams and love
-            mentoring others.
-          </p>
-          <div className="mt-6 flex gap-6">
-            <SocialLink
-              href="https://github.com/j-aycheung"
-              icon={GitHubIcon}
-              aria-label="GitHub"
-            />
-            <SocialLink
-              href="mailto:jaycheung321@gmail.com"
-              icon={MailIcon}
-              aria-label="Email"
-            />
-          </div>
-        </div>
-      </Container>
-
-      <Container className="mt-16">
-        <h2 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
-          Technical Skills
-        </h2>
-        <ul className="mt-4 grid grid-cols-1 gap-2 text-base text-zinc-600 sm:grid-cols-2 dark:text-zinc-400">
-          <li>
-            <span className="font-medium">Languages:</span> JavaScript,
-            TypeScript, Python, SQL, C, C++, Scala, Lua, Assembly
-          </li>
-          <li>
-            <span className="font-medium">Frameworks & Tools:</span> React,
-            Next.js (App Router), Node.js, Tailwind CSS, Supabase, Docker, Git,
-            PostgreSQL, MongoDB, Material-UI, Framer Motion, Recharts, Axios
-          </li>
-          <li>
-            <span className="font-medium">Platforms:</span> GitHub, Netlify,
-            CI/CD (GitHub Actions), Relativity, Streamlit
-          </li>
-          <li>
-            <span className="font-medium">Practices:</span> Agile methodologies,
-            unit testing, component-driven development, API integration
-          </li>
-        </ul>
-      </Container>
-
-      <Container className="mt-16">
-        <h2 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
-          Experience
-        </h2>
-        <ul className="mt-4 space-y-6">
-          <li>
-            <span className="font-semibold">Documentation Analyst</span> – FTI
-            Consulting (Remote){' '}
-            <span className="text-zinc-400">Feb 2025 – Present</span>
-            <ul className="ml-6 mt-1 list-disc text-base text-zinc-600 dark:text-zinc-400">
-              <li>
-                Analyzed documents for PII/PHI and business-sensitive data
-              </li>
-              <li>
-                Created structured data cards for breach assessment and
-                compliance
-              </li>
-              <li>Worked in e-discovery tools like Relativity</li>
-              <li>Participated in regular updates with legal teams</li>
-            </ul>
-          </li>
-          <li>
-            <span className="font-semibold">Full-Stack Development Intern</span>{' '}
-            – Jarellsj (Remote){' '}
-            <span className="text-zinc-400">Oct 2024 – Feb 2025</span>
-            <ul className="ml-6 mt-1 list-disc text-base text-zinc-600 dark:text-zinc-400">
-              <li>
-                Built a B2B catalog with filtering, sorting, and SKU search
-                using Next.js and Tailwind CSS
-              </li>
-              <li>
-                Integrated Supabase authentication and role-based PostgreSQL
-                access
-              </li>
-              <li>Used SSR and SSG in Next.js for optimized performance</li>
-              <li>Authored SQL queries for backend automation and logging</li>
-            </ul>
-          </li>
-          <li>
-            <span className="font-semibold">Online Instructor</span> – iD Tech
-            (Remote) <span className="text-zinc-400">Mar 2024 – Jun 2024</span>
-            <ul className="ml-6 mt-1 list-disc text-base text-zinc-600 dark:text-zinc-400">
-              <li>
-                Taught Python, Lua, and Unreal Engine in personalized sessions
-              </li>
-              <li>Created individualized lesson plans</li>
-              <li>
-                Improved student confidence through debugging and mentorship
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </Container>
-
-      <Container className="mt-16">
-        <h2 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
-          Education
-        </h2>
-        <p className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
-          <span className="font-semibold">
-            Bachelor of Science in Computer Science
-          </span>
-          , University at Buffalo{' '}
-          <span className="text-zinc-400">Aug 2019 – Dec 2023</span>
-        </p>
-      </Container>
-    </>
   )
 }
