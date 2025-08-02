@@ -40,6 +40,9 @@ export const metadata = {
   title: 'About',
   description:
     'I’m Jay Cheung, a React/Next.js developer based in Middle Village, NY. I build modern web apps and data tools with a focus on clarity, performance, and user experience.',
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function About() {
